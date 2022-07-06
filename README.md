@@ -1,4 +1,4 @@
-# UiPath Email
+# UiPath Email :mailbox_with_mail:
 Automatically composes a tailored-to-sender email using UiPath by reading in data from `EmailDb.xlsx`, editing `EmailTemplateEdit.docx` to personalize the email, exports as `EmailTemplateEdit.html`, and sends it after Gmail authentication.
 
 ## About
