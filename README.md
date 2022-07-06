@@ -1,15 +1,16 @@
 # UiPath Email
-Automatically composes a tailored-to-sender email content using UiPath by reading in data from `EmailDb.xlsx`, editing `EmailTemplateEdit.docx` to personalize the email, exports as `EmailTemplateEdit.html`, and sends it after Gmail authentication.
+Automatically composes a tailored-to-sender email using UiPath by reading in data from `EmailDb.xlsx`, editing `EmailTemplateEdit.docx` to personalize the email, exports as `EmailTemplateEdit.html`, and sends it after Gmail authentication.
 
 ## About
-I created this project to help me send fundraising and thank you emails. In order to help our constituents feel more connected to our organization, we usually address the email by the first and last name "Dear firstname lastname," and sign off the email with our name, camp name, and our position in the organization (Chris Lamb Yang, Development Co-coordinator). This is an extremely tedious task as normally I have to copy each email address, change the name, then add a subject line, etc... My program thankfully does it all for you.
+I created this project to help me send fundraising and thank you emails. In order to help our constituents feel more connected to our organization, we usually address the email by the first and last name "Dear firstname lastname," and sign off the email with our name, camp name, and our position in the organization (Chris Lamb Yang, Development Co-coordinator). This is an extremely tedious task as normally I have to copy each email address, change the name, then add a subject line, etc... My program thankfully does it all for you. 
+Furthermore, we get donations ranging from a couple of dollars to a couple thousand dollars, so in order to thank each of our donors appropriately, we have different email templates that we use. For example, for anyone that donates under $100, we just write a simple thank you email, but for someone that donates over $100, we usually send them a personalized thank you notes and other goodies so we'd like to let them know exactly how we are going to setward them in the email. The program does this by reading in the `Donation Amount` column in the spreadsheet and selects the appropriate template and fills out all the personal information. 
 
 ## How it works
 1. `Main` will ask you to sign in to Gmail through OAuth2
-2. Read in an excel file `EmailDb.xlsx` row by row and obtain all the email data from the row (`firstname`, `lastname`, `email`, `sender`, `title`, `subject`)
-3. Then it will make a copy of an email template and save it as a copy (`EmailTemplate.docx` -> `EmailTemplateEdit.docx`)
+2. Read in an excel file `EmailDb.xlsx` row by row and obtain all the email data from the row (`firstname`, `lastname`, `email`, `sender`, `title`, `subject`, `donation`)
+3. Then it will make a copy of the appropriate email template and save it as a copy (`EmailTemplate$amt.docx` -> `EmailTemplateEdit.docx`)
 4. Change keywords in the `EmailTemplateEdit.docx` such as `{{ firstname }}` to the contents of the variable `firstname` maintaining original word document formatting
-5. Export as `EmailTemplateEdit.html` so that the send email function can attach it as the body of the email
+5. Export as `EmailTemplateEdit2.html` so that the send email function can attach it as the body of the email
 6. Send the email!
 
 ## Instructions
