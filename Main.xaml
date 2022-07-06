@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1208,3143" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1197,9727" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="46">
+    <scg:List x:TypeArguments="x:String" Capacity="104">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -47,10 +47,17 @@
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>UiPath.Word.Activities</x:String>
       <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Activities.Presentation</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.Windows.Controls</x:String>
+      <x:String>System.Windows.Media</x:String>
+      <x:String>System.Windows.Threading</x:String>
+      <x:String>Microsoft.Office.Interop.Outlook</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="44">
+    <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
@@ -94,27 +101,34 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-    </scg:List>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Windows.Controls.Ribbon</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.Outlook</AssemblyReference>
+    </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="704,3078" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="839,9662" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="tianenchristopheryang@gmail.com" DisplayName="Use Gmail" EmailAddress="tianenchristopheryang@gmail.com" sap:VirtualizedContainerService.HintSize="662,2986" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
+    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="tianenchristopheryang@gmail.com" DisplayName="Use Gmail" EmailAddress="tianenchristopheryang@gmail.com" sap:VirtualizedContainerService.HintSize="797,9570" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_3" Timeout="90" UseConnectionService="False">
       <umab:GmailApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="628,2807" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="763,9391" sap2010:WorkflowViewState.IdRef="Sequence_48">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dt_email_contacts" />
             </Sequence.Variables>
@@ -123,20 +137,20 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="586,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Contacts" WorkbookPath="EmailDb.xlsx">
+            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="721,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Contacts" WorkbookPath="EmailDb.xlsx">
               <ui:ReadRange.DataTable>
                 <OutArgument x:TypeArguments="sd:DataTable">
-                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">dt_email_contacts</mca:CSharpReference>
+                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">dt_email_contacts</mca:CSharpReference>
                 </OutArgument>
               </ui:ReadRange.DataTable>
             </ui:ReadRange>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="586,2588" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="721,9172" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="552,2473" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence sap:VirtualizedContainerService.HintSize="687,9057" sap2010:WorkflowViewState.IdRef="Sequence_47">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="email" />
                       <Variable x:TypeArguments="x:String" Name="firstname" />
@@ -144,195 +158,769 @@
                       <Variable x:TypeArguments="x:String" Name="sender" />
                       <Variable x:TypeArguments="x:String" Name="title" />
                       <Variable x:TypeArguments="x:String" Name="subject" />
+                      <Variable x:TypeArguments="x:Int32" Name="donation" />
+                      <Variable x:TypeArguments="x:String" Name="filename" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="510,255" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="645,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                       <ui:MultipleAssign.AssignOperations>
                         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
                             <ui:AssignOperation.To>
                               <OutArgument x:TypeArguments="x:String">
-                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">email</mca:CSharpReference>
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">email</mca:CSharpReference>
                               </OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:String">
-                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">CurrentRow["Email"].ToString()</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_137">CurrentRow["Email"].ToString()</mca:CSharpValue>
                               </InArgument>
                             </ui:AssignOperation.Value>
                           </ui:AssignOperation>
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
                             <ui:AssignOperation.To>
                               <OutArgument x:TypeArguments="x:String">
-                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">firstname</mca:CSharpReference>
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">firstname</mca:CSharpReference>
                               </OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:String">
-                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">CurrentRow["First Name"].ToString()</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_138">CurrentRow["First Name"].ToString()</mca:CSharpValue>
                               </InArgument>
                             </ui:AssignOperation.Value>
                           </ui:AssignOperation>
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
                             <ui:AssignOperation.To>
                               <OutArgument x:TypeArguments="x:String">
-                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">lastname</mca:CSharpReference>
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">lastname</mca:CSharpReference>
                               </OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:String">
-                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">CurrentRow["Last Name"].ToString()</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_139">CurrentRow["Last Name"].ToString()</mca:CSharpValue>
                               </InArgument>
                             </ui:AssignOperation.Value>
                           </ui:AssignOperation>
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
                             <ui:AssignOperation.To>
                               <OutArgument x:TypeArguments="x:String">
-                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">sender</mca:CSharpReference>
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">sender</mca:CSharpReference>
                               </OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:String">
-                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">CurrentRow["Sender"].ToString()</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_140">CurrentRow["Sender"].ToString()</mca:CSharpValue>
                               </InArgument>
                             </ui:AssignOperation.Value>
                           </ui:AssignOperation>
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
                             <ui:AssignOperation.To>
                               <OutArgument x:TypeArguments="x:String">
-                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">title</mca:CSharpReference>
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">title</mca:CSharpReference>
                               </OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:String">
-                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">CurrentRow["Title"].ToString()</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_141">CurrentRow["Title"].ToString()</mca:CSharpValue>
                               </InArgument>
                             </ui:AssignOperation.Value>
                           </ui:AssignOperation>
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
                             <ui:AssignOperation.To>
                               <OutArgument x:TypeArguments="x:String">
-                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">subject</mca:CSharpReference>
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">subject</mca:CSharpReference>
                               </OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:String">
-                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">CurrentRow["Subject"].ToString()</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_142">CurrentRow["Subject"].ToString()</mca:CSharpValue>
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:Int32">
+                                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">donation</mca:CSharpReference>
+                              </OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:Int32">
+                                <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_182">Convert.ToInt32(CurrentRow["Donation Amount"])</mca:CSharpValue>
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">filename</mca:CSharpReference>
+                              </OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
                               </InArgument>
                             </ui:AssignOperation.Value>
                           </ui:AssignOperation>
                         </scg:List>
                       </ui:MultipleAssign.AssignOperations>
-                    </ui:MultipleAssign>
-                    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="EmailTemplate.docx" sap:VirtualizedContainerService.HintSize="510,368" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
-                      <p:WordApplicationScope.Body>
-                        <ActivityAction x:TypeArguments="ui:WordDocument">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,259" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <p:WordSaveAs DisplayName="Save Document As" FilePath="EmailTemplateEdit.docx" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="WordSaveAs_1" />
-                          </Sequence>
-                        </ActivityAction>
-                      </p:WordApplicationScope.Body>
-                    </p:WordApplicationScope>
-                    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="EmailTemplateEdit.docx" sap:VirtualizedContainerService.HintSize="510,1176" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2">
-                      <p:WordApplicationScope.Body>
-                        <ActivityAction x:TypeArguments="ui:WordDocument">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1067" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" ReplaceAll="True" Search="{}{{ firstname }}">
-                              <p:WordReplaceText.Replace>
-                                <InArgument x:TypeArguments="x:String">
-                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">firstname</mca:CSharpValue>
-                                </InArgument>
-                              </p:WordReplaceText.Replace>
-                            </p:WordReplaceText>
-                            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" ReplaceAll="True" Search="{}{{ lastname }}">
-                              <p:WordReplaceText.Replace>
-                                <InArgument x:TypeArguments="x:String">
-                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">lastname</mca:CSharpValue>
-                                </InArgument>
-                              </p:WordReplaceText.Replace>
-                            </p:WordReplaceText>
-                            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" ReplaceAll="True" Search="{}{{ sender }}">
-                              <p:WordReplaceText.Replace>
-                                <InArgument x:TypeArguments="x:String">
-                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">sender</mca:CSharpValue>
-                                </InArgument>
-                              </p:WordReplaceText.Replace>
-                            </p:WordReplaceText>
-                            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_4" ReplaceAll="True" Search="{}{{ title }}">
-                              <p:WordReplaceText.Replace>
-                                <InArgument x:TypeArguments="x:String">
-                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">title</mca:CSharpValue>
-                                </InArgument>
-                              </p:WordReplaceText.Replace>
-                            </p:WordReplaceText>
-                            <p:WordSaveAs DisplayName="Save Document As" FilePath="EmailTemplateEdit.html" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="WordSaveAs_2" SaveAsFileType="WebPage" />
-                          </Sequence>
-                        </ActivityAction>
-                      </p:WordApplicationScope.Body>
-                    </p:WordApplicationScope>
-                    <Sequence sap:VirtualizedContainerService.HintSize="510,462" sap2010:WorkflowViewState.IdRef="Sequence_10">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" BodyDocumentPath="EmailTemplateEdit.html" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,370" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" UseDocumentAsBody="False">
-                        <umab:SendMailX.Account>
-                          <InArgument x:TypeArguments="um:IMailQuickHandle">
-                            <mca:CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">Gmail</mca:CSharpValue>
-                          </InArgument>
-                        </umab:SendMailX.Account>
-                        <umab:SendMailX.Files>
-                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                        </umab:SendMailX.Files>
-                        <umab:SendMailX.HtmlBodyFromFile>
-                          <umabh:HtmlContentArgument FilePath="EmailTemplateEdit.html">
-                            <umabh:HtmlContentArgument.RuntimeImages>
-                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                            </umabh:HtmlContentArgument.RuntimeImages>
-                            <umabh:HtmlContentArgument.ValueMappings>
-                              <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
-                            </umabh:HtmlContentArgument.ValueMappings>
-                          </umabh:HtmlContentArgument>
-                        </umab:SendMailX.HtmlBodyFromFile>
-                        <umab:SendMailX.Subject>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">subject</mca:CSharpValue>
-                          </InArgument>
-                        </umab:SendMailX.Subject>
-                        <umab:SendMailX.To>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">email</mca:CSharpValue>
-                          </InArgument>
-                        </umab:SendMailX.To>
-                      </umab:SendMailX>
-                    </Sequence>
+                    </ui:MultipleAssign>
+                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="645,8874" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                      <ui:IfElseIf.ConditionBlocks>
+                        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                          <ui:IfElseIfBlock BlockType="If">
+                            <ui:IfElseIfBlock.Condition>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_144">donation &lt;= 100</mca:CSharpValue>
+                              </InArgument>
+                            </ui:IfElseIfBlock.Condition>
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="552,2080" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="EmailTemplateUnder100.docx" sap:VirtualizedContainerService.HintSize="510,368" sap2010:WorkflowViewState.IdRef="WordApplicationScope_32">
+                                  <p:WordApplicationScope.Body>
+                                    <ActivityAction x:TypeArguments="ui:WordDocument">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,259" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <p:WordSaveAs DisplayName="Save Document As" FilePath="EmailTemplateEdit.docx" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="WordSaveAs_32">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordSaveAs>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </p:WordApplicationScope.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </p:WordApplicationScope>
+                                <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="EmailTemplateEdit.docx" sap:VirtualizedContainerService.HintSize="510,1176" sap2010:WorkflowViewState.IdRef="WordApplicationScope_33">
+                                  <p:WordApplicationScope.Body>
+                                    <ActivityAction x:TypeArguments="ui:WordDocument">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1067" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_61" ReplaceAll="True" Search="{}{{ firstname }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_235">firstname</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_62" ReplaceAll="True" Search="{}{{ lastname }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_236">lastname</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_63" ReplaceAll="True" Search="{}{{ sender }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_237">sender</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_64" ReplaceAll="True" Search="{}{{ title }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_238">title</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordSaveAs DisplayName="Save Document As" FilePath="EmailTemplateEdit2.html" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="WordSaveAs_33" SaveAsFileType="WebPage">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordSaveAs>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </p:WordApplicationScope.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </p:WordApplicationScope>
+                                <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" BodyDocumentPath="EmailTemplateEdit.html" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="510,364" sap2010:WorkflowViewState.IdRef="SendMailX_18" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" UseDocumentAsBody="False">
+                                  <umab:SendMailX.Account>
+                                    <InArgument x:TypeArguments="um:IMailQuickHandle">
+                                      <mca:CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_239">Gmail</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.Account>
+                                  <umab:SendMailX.Files>
+                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                  </umab:SendMailX.Files>
+                                  <umab:SendMailX.HtmlBodyFromFile>
+                                    <umabh:HtmlContentArgument FilePath="EmailTemplateEdit2.html">
+                                      <umabh:HtmlContentArgument.RuntimeImages>
+                                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                      </umabh:HtmlContentArgument.RuntimeImages>
+                                      <umabh:HtmlContentArgument.ValueMappings>
+                                        <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                      </umabh:HtmlContentArgument.ValueMappings>
+                                    </umabh:HtmlContentArgument>
+                                  </umab:SendMailX.HtmlBodyFromFile>
+                                  <umab:SendMailX.Subject>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_241">subject</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.Subject>
+                                  <umab:SendMailX.To>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_240">email</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.To>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </umab:SendMailX>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf">
+                            <ui:IfElseIfBlock.Condition>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_154">donation &lt; 500</mca:CSharpValue>
+                              </InArgument>
+                            </ui:IfElseIfBlock.Condition>
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="552,2080" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="EmailTemplateOver100.docx" sap:VirtualizedContainerService.HintSize="510,368" sap2010:WorkflowViewState.IdRef="WordApplicationScope_26">
+                                  <p:WordApplicationScope.Body>
+                                    <ActivityAction x:TypeArguments="ui:WordDocument">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,259" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <p:WordSaveAs DisplayName="Save Document As" FilePath="EmailTemplateEdit.docx" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="WordSaveAs_26" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </p:WordApplicationScope.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </p:WordApplicationScope>
+                                <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="EmailTemplateEdit.docx" sap:VirtualizedContainerService.HintSize="510,1176" sap2010:WorkflowViewState.IdRef="WordApplicationScope_27">
+                                  <p:WordApplicationScope.Body>
+                                    <ActivityAction x:TypeArguments="ui:WordDocument">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1067" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_49" ReplaceAll="True" Search="{}{{ firstname }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_211">firstname</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_50" ReplaceAll="True" Search="{}{{ lastname }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_212">lastname</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_51" ReplaceAll="True" Search="{}{{ sender }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_213">sender</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_52" ReplaceAll="True" Search="{}{{ title }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_214">title</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordSaveAs DisplayName="Save Document As" FilePath="EmailTemplateEdit2.html" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="WordSaveAs_27" SaveAsFileType="WebPage">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordSaveAs>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </p:WordApplicationScope.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </p:WordApplicationScope>
+                                <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" BodyDocumentPath="EmailTemplateEdit.html" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="510,364" sap2010:WorkflowViewState.IdRef="SendMailX_15" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" UseDocumentAsBody="False">
+                                  <umab:SendMailX.Account>
+                                    <InArgument x:TypeArguments="um:IMailQuickHandle">
+                                      <mca:CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_215">Gmail</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.Account>
+                                  <umab:SendMailX.Files>
+                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                  </umab:SendMailX.Files>
+                                  <umab:SendMailX.HtmlBodyFromFile>
+                                    <umabh:HtmlContentArgument FilePath="EmailTemplateEdit2.html">
+                                      <umabh:HtmlContentArgument.RuntimeImages>
+                                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                      </umabh:HtmlContentArgument.RuntimeImages>
+                                      <umabh:HtmlContentArgument.ValueMappings>
+                                        <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                      </umabh:HtmlContentArgument.ValueMappings>
+                                    </umabh:HtmlContentArgument>
+                                  </umab:SendMailX.HtmlBodyFromFile>
+                                  <umab:SendMailX.Subject>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_217">subject</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.Subject>
+                                  <umab:SendMailX.To>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_216">email</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.To>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </umab:SendMailX>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf">
+                            <ui:IfElseIfBlock.Condition>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_163">donation &lt;1000</mca:CSharpValue>
+                              </InArgument>
+                            </ui:IfElseIfBlock.Condition>
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="552,2080" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="EmailTemplateOver500.docx" sap:VirtualizedContainerService.HintSize="510,368" sap2010:WorkflowViewState.IdRef="WordApplicationScope_28">
+                                  <p:WordApplicationScope.Body>
+                                    <ActivityAction x:TypeArguments="ui:WordDocument">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,259" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <p:WordSaveAs DisplayName="Save Document As" FilePath="EmailTemplateEdit.docx" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="WordSaveAs_28" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </p:WordApplicationScope.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </p:WordApplicationScope>
+                                <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="EmailTemplateEdit.docx" sap:VirtualizedContainerService.HintSize="510,1176" sap2010:WorkflowViewState.IdRef="WordApplicationScope_29">
+                                  <p:WordApplicationScope.Body>
+                                    <ActivityAction x:TypeArguments="ui:WordDocument">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1067" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_53" ReplaceAll="True" Search="{}{{ firstname }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_219">firstname</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_54" ReplaceAll="True" Search="{}{{ lastname }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_220">lastname</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_55" ReplaceAll="True" Search="{}{{ sender }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_221">sender</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_56" ReplaceAll="True" Search="{}{{ title }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_222">title</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordSaveAs DisplayName="Save Document As" FilePath="EmailTemplateEdit2.html" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="WordSaveAs_29" SaveAsFileType="WebPage">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordSaveAs>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </p:WordApplicationScope.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </p:WordApplicationScope>
+                                <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" BodyDocumentPath="EmailTemplateEdit.html" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="510,364" sap2010:WorkflowViewState.IdRef="SendMailX_16" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" UseDocumentAsBody="False">
+                                  <umab:SendMailX.Account>
+                                    <InArgument x:TypeArguments="um:IMailQuickHandle">
+                                      <mca:CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_223">Gmail</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.Account>
+                                  <umab:SendMailX.Files>
+                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                  </umab:SendMailX.Files>
+                                  <umab:SendMailX.HtmlBodyFromFile>
+                                    <umabh:HtmlContentArgument FilePath="EmailTemplateEdit2.html">
+                                      <umabh:HtmlContentArgument.RuntimeImages>
+                                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                      </umabh:HtmlContentArgument.RuntimeImages>
+                                      <umabh:HtmlContentArgument.ValueMappings>
+                                        <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                      </umabh:HtmlContentArgument.ValueMappings>
+                                    </umabh:HtmlContentArgument>
+                                  </umab:SendMailX.HtmlBodyFromFile>
+                                  <umab:SendMailX.Subject>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_225">subject</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.Subject>
+                                  <umab:SendMailX.To>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_224">email</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.To>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </umab:SendMailX>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="ElseIf">
+                            <ui:IfElseIfBlock.Condition>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_172">donation &gt;= 1000</mca:CSharpValue>
+                              </InArgument>
+                            </ui:IfElseIfBlock.Condition>
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="552,2080" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="EmailTemplateOver1000.docx" sap:VirtualizedContainerService.HintSize="510,368" sap2010:WorkflowViewState.IdRef="WordApplicationScope_30">
+                                  <p:WordApplicationScope.Body>
+                                    <ActivityAction x:TypeArguments="ui:WordDocument">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,259" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <p:WordSaveAs DisplayName="Save Document As" FilePath="EmailTemplateEdit.docx" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="WordSaveAs_30" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </p:WordApplicationScope.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </p:WordApplicationScope>
+                                <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="EmailTemplateEdit.docx" sap:VirtualizedContainerService.HintSize="510,1176" sap2010:WorkflowViewState.IdRef="WordApplicationScope_31">
+                                  <p:WordApplicationScope.Body>
+                                    <ActivityAction x:TypeArguments="ui:WordDocument">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1067" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_57" ReplaceAll="True" Search="{}{{ firstname }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_227">firstname</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_58" ReplaceAll="True" Search="{}{{ lastname }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_228">lastname</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_59" ReplaceAll="True" Search="{}{{ sender }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_229">sender</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_60" ReplaceAll="True" Search="{}{{ title }}">
+                                          <p:WordReplaceText.Replace>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_230">title</mca:CSharpValue>
+                                            </InArgument>
+                                          </p:WordReplaceText.Replace>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordReplaceText>
+                                        <p:WordSaveAs DisplayName="Save Document As" FilePath="EmailTemplateEdit2.html" sap:VirtualizedContainerService.HintSize="434,167" sap2010:WorkflowViewState.IdRef="WordSaveAs_31" SaveAsFileType="WebPage">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </p:WordSaveAs>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </p:WordApplicationScope.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </p:WordApplicationScope>
+                                <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" BodyDocumentPath="EmailTemplateEdit2.html" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="510,364" sap2010:WorkflowViewState.IdRef="SendMailX_17" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" UseDocumentAsBody="False">
+                                  <umab:SendMailX.Account>
+                                    <InArgument x:TypeArguments="um:IMailQuickHandle">
+                                      <mca:CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_231">Gmail</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.Account>
+                                  <umab:SendMailX.Files>
+                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                  </umab:SendMailX.Files>
+                                  <umab:SendMailX.HtmlBodyFromFile>
+                                    <umabh:HtmlContentArgument FilePath="EmailTemplateEdit2.html">
+                                      <umabh:HtmlContentArgument.RuntimeImages>
+                                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                      </umabh:HtmlContentArgument.RuntimeImages>
+                                      <umabh:HtmlContentArgument.ValueMappings>
+                                        <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                      </umabh:HtmlContentArgument.ValueMappings>
+                                    </umabh:HtmlContentArgument>
+                                  </umab:SendMailX.HtmlBodyFromFile>
+                                  <umab:SendMailX.Subject>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_233">subject</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.Subject>
+                                  <umab:SendMailX.To>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_232">email</mca:CSharpValue>
+                                    </InArgument>
+                                  </umab:SendMailX.To>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </umab:SendMailX>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                        </sc:BindingList>
+                      </ui:IfElseIf.ConditionBlocks>
+                    </ui:IfElseIf>
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
               <ui:ForEachRow.DataTable>
                 <InArgument x:TypeArguments="sd:DataTable">
-                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">dt_email_contacts</mca:CSharpValue>
+                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_136">dt_email_contacts</mca:CSharpValue>
                 </InArgument>
               </ui:ForEachRow.DataTable>
             </ui:ForEachRow>
